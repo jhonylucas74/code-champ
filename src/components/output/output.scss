@@ -6,6 +6,8 @@
   font-family: $font-secondary;
   border-left: 2px solid $border-color;
   border-top: 2px solid $border-color;
+  display: flex;
+  flex-direction: column;
 
   &__header {
     height: 25px;
@@ -16,5 +18,19 @@
     font-size: 14px;
     color: $text-color-primary;
     border-bottom: 2px solid $border-color;
+  }
+
+  ul {
+    list-style: none;
+    flex: 1;
+    overflow-y: auto;
+
+    li {
+      font-family: $font-secondary;
+      box-sizing: border-box;
+      position: relative;
+      font-size: 14px;
+      padding: 5px 10px;
+    }
   }
 }

@@ -4,7 +4,7 @@ function write (log) {
 }
 
 function endProgram() {
-  const data = { finish: true };
+  const data = { finish: true, log: 'fim do programa.' };
   postMessage(JSON.stringify(data));
 }
 

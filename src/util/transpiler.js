@@ -1,4 +1,6 @@
 import * as Babel from '@babel/standalone';
+import Store from 'Redux/';
+import {addOutput, cleanOutputs} from 'Redux/output/actions';
 
 class Transpiler {
   constructor () {
@@ -13,6 +15,8 @@ class Transpiler {
   handleMessage(event) {
     const data = JSON.parse(event.data);
     console.log(data);
+    Store.dispatch(addOutput(data));
+    
     if (data.finish) {
       this.stop()
     }
