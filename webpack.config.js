@@ -1,11 +1,15 @@
 const Dotenv = require('dotenv-webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./public/index.html",
   filename: "./index.html"
 });
+
+const APP_DIR = path.resolve(__dirname, './src');
+const MONACO_DIR = path.resolve(__dirname, './node_modules/monaco-editor');
 
 module.exports = {
   entry: "./src",
@@ -38,9 +42,14 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },{
+        test: /\.css$/,
+        include: MONACO_DIR,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(scss|css)$/,
+        include: APP_DIR,
         exclude: /node_modules/,
         use: [
           { loader: "style-loader" },
@@ -81,6 +90,9 @@ module.exports = {
   },
   plugins: [
     new Dotenv({systemvars: true}),
-    htmlPlugin
+    htmlPlugin,
+    new MonacoWebpackPlugin({
+      languages: ['json', 'javascript']
+    })
   ]
 }
