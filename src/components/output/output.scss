@@ -1,0 +1,20 @@
+@import '~Styles/theme';
+
+.output {
+  background-color: $bg-color-primary;
+  color: $text-color-primary;
+  font-family: $font-secondary;
+  border-left: 2px solid $border-color;
+  border-top: 2px solid $border-color;
+
+  &__header {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    background-color: $bg-color-secondary;
+    font-size: 14px;
+    color: $text-color-primary;
+    border-bottom: 2px solid $border-color;
+  }
+}

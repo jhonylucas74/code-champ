@@ -1,0 +1,74 @@
+@import '~Styles/theme';
+
+.inputs-list {
+  background-color: $bg-color-primary;
+  color: $text-color-primary;
+  font-family: $font-secondary;
+  border-left: 2px solid $border-color;
+  border-top: 2px solid $border-color;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    background-color: $bg-color-secondary;
+    font-size: 14px;
+    color: $text-color-primary;
+    border-bottom: 2px solid $border-color;
+  }
+
+  ul {
+    list-style: none;
+    flex: 1;
+    overflow-y: auto;
+
+    li {
+      box-sizing: border-box;
+      position: relative;
+      height: 25px;
+      font-size: 14px;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #404040;
+
+      input {
+        font-family: $font-secondary;
+        box-sizing: border-box;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $bg-color-primary;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        color: $text-color-primary;
+        padding-left: 10px;
+      }
+
+      &:last-child {
+        cursor: pointer;
+        color: darken($text-color-primary, 20%);
+      }
+
+      .close {
+        display: none;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+
+      &:hover .close {
+        display: inline-block;
+      }
+    }
+  }
+}

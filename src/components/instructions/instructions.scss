@@ -1,0 +1,10 @@
+@import '~Styles/theme';
+
+.instructions {
+  display: flex;
+  align-items: flex-end;
+  background-color: $bg-color-primary;
+  color: $text-color-primary;
+  font-family: $font-primary;
+  border-left: 2px solid $border-color;
+}

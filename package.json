@@ -1,0 +1,48 @@
+{
+  "name": "code-champ",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress --mode development",
+    "build": "webpack",
+    "test": ""
+  },
+  "author": "@jhonylucas74",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-localstorage": "^0.4.1",
+    "redux-logger": "^3.0.6",
+    "uuid-with-v6": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^0.25.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "icon-font-generator": "^2.1.10",
+    "image-webpack-loader": "^4.3.1",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.8",
+    "dotenv-webpack": "^1.7.0",
+    "sass": "^1.20.1"
+  }
+}

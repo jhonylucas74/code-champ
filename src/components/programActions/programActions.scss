@@ -1,0 +1,29 @@
+@import '~Styles/theme';
+
+.program-actions {
+  border-top: 2px solid $border-color;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .button {
+    flex: 1;
+    font-family: $font-primary;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    background-color: $bg-color-primary;
+    border: none;
+    outline: none;
+    color: $text-color-primary;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($text-color-primary, 0.1);
+    }
+
+    &:first-child {
+      border-right: 2px solid $border-color;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import '~Styles/theme';
+
+header.header {
+  background-color: $header-color;
+  height: 35px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-right: 20px;
+
+  .header__player-name {
+    margin-left: auto;
+    font-family: $font-primary;
+    color: $text-color-primary;
+    font-size: 14px;
+    cursor: default;
+  }
+}
