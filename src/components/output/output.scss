@@ -31,6 +31,10 @@
       position: relative;
       font-size: 14px;
       padding: 5px 10px;
+
+      &.finish {
+        opacity: 0.5;
+      }
     }
   }
 }

@@ -14,10 +14,6 @@ class InputsList extends React.Component {
     this.onChangeInput = this.onChangeInput.bind(this);
   }
 
-  removeInput () {
-
-  }
-
   onChangeInput (value, id) {
     this.props.updateInput({ id, value });
   }

@@ -1,6 +1,12 @@
+let ___args = []
+
 function write (log) {
   const data = { log };
   postMessage(JSON.stringify(data));
+}
+
+function read () {
+  return (___args.shift() || {}).value;
 }
 
 function endProgram() {
@@ -26,5 +32,6 @@ function executeProgram(program) {
 
 addEventListener('message', event => {
   const data = JSON.parse(event.data);
-  executeProgram(data.program)
+  ___args = data.args;
+  executeProgram(data.program);
 });

@@ -23,6 +23,7 @@ class Transpiler {
   }
 
   execute(code, args = []) {
+    Store.dispatch(cleanOutputs());
     this.stop();
     this.worker = new Worker('../workers/core.js', { type: 'module' });
     this.worker.onmessage = this.handleMessage;
