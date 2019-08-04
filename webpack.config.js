@@ -2,6 +2,7 @@ const Dotenv = require('dotenv-webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+const WorkerPlugin = require('worker-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./public/index.html",
@@ -93,6 +94,7 @@ module.exports = {
     htmlPlugin,
     new MonacoWebpackPlugin({
       languages: ['json', 'javascript']
-    })
+    }),
+    new WorkerPlugin()
   ]
 }

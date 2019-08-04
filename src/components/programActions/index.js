@@ -1,11 +1,17 @@
 import React from 'react';
+import Transpiler from 'Util/transpiler';
+import {connect} from 'react-redux';
 import './programActions.scss';
 
-export default class ProgramActions extends React.Component {
+class ProgramActions extends React.Component {
+  executeProgram() {
+    Transpiler.execute(this.props.code, this.props.inputs);
+  }
+
   render () {
     return (
       <div className="program-actions">
-        <button className="button">
+        <button onClick={() => this.executeProgram()} className="button">
           Executar código
         </button>
         <button className="button">
@@ -15,3 +21,9 @@ export default class ProgramActions extends React.Component {
     )
   }
 }
+
+const mapStateToProps = ({ code, inputs }) => {
+  return { code, inputs };
+}
+
+export default connect(mapStateToProps)(ProgramActions);
