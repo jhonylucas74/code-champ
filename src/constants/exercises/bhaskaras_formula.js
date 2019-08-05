@@ -11,7 +11,7 @@ export default {
 
   ## Output
 
-  Print the result with 5 digits after the decimal point or the message if it is impossible to calculate. Example output: R1= 1.0, R2= 2.0.
+  Print the result with \`\`5 digits after the decimal point\`\` or the message if it is \`\`impossivel calcular\`\`. Example output: \`\`R1= 1.0, R2= 2.0\`\`. R1 = (- b + Δ) / 2.a , R2 = (- b - Δ) / 2.a
   `,
   tests: [
     { inputs: [10.0, 20.1, 5.1], output: /R1.*=.*-0\.29788.*\,.*R2.*=.*-1\.71212/ },

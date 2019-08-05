@@ -6,7 +6,7 @@ import reducers from './reducers';
 
 const middlewares = compose(
   applyMiddleware(logger),
-  persistState('history')
+  persistState(['history', 'code'])
 );
 
 

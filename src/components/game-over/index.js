@@ -5,15 +5,15 @@ import exercises from '../../constants/exercises/';
 
 class GameOver extends React.Component {
   getNote() {
-    const total = this.props.history.length
     let tests = [];
 
     for (let history of this.props.history) {
-      tests = tests.concat(history.result);
+      tests = tests.concat(history.result.tests);
     }
     
-    const corrects = tests.filter(elm => elm.status === 'sucess')
-    return Number((corrects * 100 ) / total).toFixed(1);
+    const total = tests.length;
+    const corrects = tests.filter(elm => elm.status == 'sucess').length;
+    return Number((corrects * 10 ) / total).toFixed(1);
   }
 
   encode (note) {

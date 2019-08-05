@@ -11,7 +11,7 @@ export default {
 
   ## Output
 
-  Present a value that represents the average consumption of a car with 3 digits after the decimal point, followed by the message "km/l".
+  Present a value that represents the average consumption of a car with \`\`3 digits after the decimal point\`\`, followed by the message \`\`km/l\`\`.
   `,
   tests: [
     { inputs: [500, 35.0], output: /14\.286.*km\/l/ },

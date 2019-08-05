@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import {cleanTests} from 'Redux/tests/actions';
 import exercises from '../../constants/exercises/';
 import {setExercise} from 'Redux/exercise/actions';
+import {cleanInputs} from 'Redux/inputs/actions';
+import {cleanOutputs} from 'Redux/output/actions';
 import './tests.scss';
 
 class Tests extends React.Component {
@@ -18,7 +20,9 @@ class Tests extends React.Component {
   }
 
   next () {
+    this.props.cleanInputs();
     this.props.cleanTests();
+    this.props.cleanOutputs();
     this.props.setExercise(exercises[this.props.history.length]);
   }
 
@@ -63,5 +67,7 @@ const mapStateToProps = ({ tests, history }) => {
 
 export default connect(mapStateToProps, {
   cleanTests,
-  setExercise
+  setExercise,
+  cleanInputs,
+  cleanOutputs
 })(Tests);
