@@ -1,6 +1,6 @@
 import { SET_CODE } from '../actionTypes';
 
-const defaultState = "for (let i = 1; i <= 100; i++) {write(i) }";
+const defaultState = "// seu código aqui";
 
 const codeReducer = (state = defaultState, action) => {
   switch(action.type) {
