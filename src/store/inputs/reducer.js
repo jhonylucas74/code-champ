@@ -1,10 +1,14 @@
-import { ADD_INPUT, UPDATE_INPUT, CLEAN_INPUTS, REMOVE_INPUT } from '../actionTypes';
+import { ADD_INPUT, SET_INPUTS, UPDATE_INPUT, CLEAN_INPUTS, REMOVE_INPUT } from '../actionTypes';
 import uuid from 'uuid-with-v6';
 
 const inputReducer = (state = [], action) => {
   switch(action.type) {
     case CLEAN_INPUTS:
       return [];
+    case SET_INPUTS:
+      return action.payload.map(elm => {
+        return { id: uuid.v6(), value: elm }
+      })
     case ADD_INPUT:
       return [...state, { id: uuid.v6(), value: '' }];
     case UPDATE_INPUT:

@@ -7,12 +7,19 @@
   color: $text-color-primary;
   font-family: $font-primary;
   border-left: 2px solid $border-color;
+  position: relative;
 
   .content {
     padding: 10px;
     box-sizing: border-box;
     flex: 1;
     font-family: $font-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 28px;
+    overflow-y: auto;
 
     h1 {
       font-size: 18px;
