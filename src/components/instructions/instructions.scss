@@ -2,9 +2,39 @@
 
 .instructions {
   display: flex;
-  align-items: flex-end;
-  background-color: $bg-color-primary;
+  flex-direction: column;
+  background-color: $bg-color-secondary;
   color: $text-color-primary;
   font-family: $font-primary;
   border-left: 2px solid $border-color;
+
+  .content {
+    padding: 10px;
+    box-sizing: border-box;
+    flex: 1;
+    font-family: $font-primary;
+
+    h1 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    code {
+      background-color: $bg-color-primary;
+      color: #8464D5;
+      padding: 0px 5px;
+      border-radius: 3px;
+    }
+  }
 }

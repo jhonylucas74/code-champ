@@ -21,7 +21,7 @@ function executeProgram(program) {
     const data = {
       error: true,
       stack: err.stack,
-      log: err.message
+      log: err.message + err.stack
     }
 
     postMessage(JSON.stringify(data));

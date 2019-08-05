@@ -28,14 +28,21 @@ class Transpiler {
     this.worker = new Worker('../workers/core.js', { type: 'module' });
     this.worker.onmessage = this.handleMessage;
 
-    const babelcode = Babel.transform(code, { presets: ['es2015'] }).code;
-    console.log(babelcode);
-    const params = {
-      program: babelcode,
-      args,
-    }
+    try {
+      const babelcode = Babel.transform(code, { presets: ['es2015'] }).code;
+      console.log(babelcode);
+      const params = {
+        program: babelcode,
+        args,
+      }
 
-    this.worker.postMessage(JSON.stringify(params));
+      this.worker.postMessage(JSON.stringify(params));
+    } catch (err) {
+      Store.dispatch(addOutput({
+        error: true,
+        log: err.message + err.stack
+      }));
+    }
   }
 }
 
