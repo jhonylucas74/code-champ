@@ -23,7 +23,7 @@ class ProgramActions extends React.Component {
   }
 
   componentDidMount () {
-    this.props.setExercise({...exercises[0], index: 0 });
+    this.props.setExercise({...exercises[this.props.history.length] });
   }
 
   executeProgram () {
@@ -110,8 +110,8 @@ class ProgramActions extends React.Component {
   }
 }
 
-const mapStateToProps = ({ code, inputs, output, exercise, tests }) => {
-  return { code, inputs, output, exercise, tests };
+const mapStateToProps = ({ code, inputs, output, exercise, tests, history }) => {
+  return { code, inputs, output, exercise, tests, history };
 }
 
 export default connect(mapStateToProps, {
