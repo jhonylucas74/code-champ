@@ -6,7 +6,7 @@ export default class Header extends React.Component {
     return (
       <header className="header">
         <p className="header__player-name">
-          Jhony Lucas
+          Champ Code
         </p>
       </header>
     )

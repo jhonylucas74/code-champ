@@ -1,5 +1,6 @@
 import React from 'react';
 import ProgramActions from '../programActions/'
+import GameOver from '../game-over/'
 import Markdown from 'react-markdown';
 import {connect} from 'react-redux';
 import Tests from '../tests/';
@@ -16,6 +17,7 @@ class Intructions extends React.Component {
         </div>
         <Tests />
         <ProgramActions />
+        <GameOver />
       </div>
     )
   }
